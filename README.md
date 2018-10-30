@@ -4,6 +4,7 @@ Reads a *.tsv file one record at a time, checks the record for proper form, and 
 
 Uses Builder Pattern that adds on arguments. Example:
 
+```
 public static void main(String[] args) { TSVFilter myTSVFilter = new TSVFilter
             .WhichFile("mydata.tsv")
             .select("Name", "Samuel")
@@ -11,8 +12,10 @@ public static void main(String[] args) { TSVFilter myTSVFilter = new TSVFilter
     System.out.println(myTSVFilter);
     new TSVPipeline(myTSVFilter).doit();
 }
+```
 
 Using terminal stream operations:
+```
 public static void main(String[] args) { TSVFilter myTSVFilter = new TSVFilter
             .WhichFile("mydata.tsv")
             .select("Name", "Frank")
@@ -21,3 +24,4 @@ public static void main(String[] args) { TSVFilter myTSVFilter = new TSVFilter
     System.out.println(myTSVFilter);
     new TSVPipeline(myTSVFilter).doit();
 }
+```
